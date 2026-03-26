@@ -59,10 +59,10 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    if(list -> tail == NULL) return NULL;
-    if(list -> tail -> prev == NULL) return NULL;
-    void *dato = list -> tail -> prev -> data;
-    list -> current = list -> tail -> prev;
+    if(list -> current == NULL) return NULL;
+    if(list -> current -> prev == NULL) return NULL;
+    void *dato = list -> current -> prev -> data;
+    list -> current = list -> current -> prev;
     return dato;
 }
 
