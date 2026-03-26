@@ -70,7 +70,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    void dato = list -> current -> data;
+    void* dato = list -> current -> data;
     return *dato;
 }
 

@@ -32,3 +32,18 @@ list.c:75:1: error: control reaches end of non-void function [-Werror=return-typ
       | ^
 cc1: all warnings being treated as errors
 dd8329e
+Thu Mar 26 07:16:06 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:74:12: error: dereferencing ‘void *’ pointer [-Werror]
+   74 |     return *dato;
+      |            ^~~~~
+list.c:74:12: error: void value not ignored as it ought to be
+list.c:75:1: error: control reaches end of non-void function [-Werror=return-type]
+   75 | }
+      | ^
+cc1: all warnings being treated as errors
+1cd6750
