@@ -228,3 +228,16 @@ Thu Mar 26 07:54:24 PM UTC 2026:
  1 file changed, 1 insertion(+), 2 deletions(-)
  tests:  0|0
 37569ea
+Thu Mar 26 07:54:49 PM UTC 2026: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:41:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   41 |     int dato = list -> current -> data;
+      |                ^~~~
+list.c:42:12: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Wint-conversion]
+   42 |     return dato;
+      |            ^~~~
+ac729bc
