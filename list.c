@@ -71,13 +71,17 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     void* dato = list -> current -> data;
-    Node* der = list -> current -> next;
     if(list -> current == list -> head){
-        list -> head = der;
+        list -> head = list -> current -> next;
         list -> head -> prev = NULL;
+    }
+    else if(list -> current == list -> tail){
+        list -> tail = list -> current -> prev;
+        list -> current = NULL;
     }
     else{
         Node* izq = list -> current -> prev;
+        Node* der = list -> current -> next;
         list -> current = der;
         der -> prev = izq;
         izq -> next = der;
