@@ -75,10 +75,12 @@ void * popCurrent(List * list) {
     if(list -> current == list -> head){
         list -> head = der;
     }
-    Node* izq = list -> current -> prev;
-    list -> current = der;
-    der -> prev = izq;
-    izq -> next = der;
+    else{
+        Node* izq = list -> current -> prev;
+        list -> current = der;
+        der -> prev = izq;
+        izq -> next = der;
+    }
     return dato;
 }
 
