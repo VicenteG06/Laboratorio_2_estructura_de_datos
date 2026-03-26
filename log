@@ -72,3 +72,14 @@ Thu Mar 26 07:26:52 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 4ddb5b4
+Thu Mar 26 07:27:14 PM UTC 2026: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:77:9: error: ‘head’ undeclared (first use in this function)
+   77 |         head -> prev = NULL;
+      |         ^~~~
+list.c:77:9: note: each undeclared identifier is reported only once for each function it appears in
+6708585
