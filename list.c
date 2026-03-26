@@ -71,7 +71,7 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     void* dato = list -> current -> data;
-    return *dato;
+    return dato;
 }
 
 void cleanList(List * list) {
