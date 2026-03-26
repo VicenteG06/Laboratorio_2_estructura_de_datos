@@ -12,3 +12,23 @@ Thu Mar 26 07:02:06 PM UTC 2026:
  tests:  12|0
 total_score: 60/60
 b96e3ea
+Thu Mar 26 07:15:50 PM UTC 2026: 
+ list.c | 71 +++++++-----------------------------------------------------------
+ 1 file changed, 7 insertions(+), 64 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:73:10: error: variable or field ‘dato’ declared void
+   73 |     void dato = list -> current -> data;
+      |          ^~~~
+list.c:73:17: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   73 |     void dato = list -> current -> data;
+      |                 ^~~~
+list.c:74:12: error: invalid type argument of unary ‘*’ (have ‘int’)
+   74 |     return *dato;
+      |            ^~~~~
+list.c:75:1: error: control reaches end of non-void function [-Werror=return-type]
+   75 | }
+      | ^
+cc1: all warnings being treated as errors
+dd8329e
