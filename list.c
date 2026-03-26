@@ -74,7 +74,7 @@ void * popCurrent(List * list) {
     Node* der = list -> current -> next;
     if(list -> current == list -> head){
         list -> head = der;
-        head -> prev = NULL;
+        list -> head -> prev = NULL;
     }
     else{
         Node* izq = list -> current -> prev;
