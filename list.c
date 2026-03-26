@@ -52,7 +52,10 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+    if(list -> tail == NULL) return NULL;
+    void *dato = list -> tail -> data;
+    list -> current = list -> tail;
+    return dato;
 }
 
 void * prevList(List * list) {
