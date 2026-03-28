@@ -85,7 +85,11 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
     Node* nuevo_nodo = createNode(data);
-    if(list -> current -> next == NULL) list -> current -> next = nuevo_nodo; 
+    if(list -> current == NULL){
+        nuevo_nodo -> next = list -> head;
+        list -> head = nuevo_nodo;
+    }
+    else if(list -> current -> next == NULL) list -> current -> next = nuevo_nodo; 
     else{
         nuevo_nodo -> prev = list -> current;
         nuevo_nodo -> next = list -> current -> next;
