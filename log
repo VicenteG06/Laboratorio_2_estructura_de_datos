@@ -297,3 +297,23 @@ Thu Mar 26 08:05:00 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 aa078ab
+Sat Mar 28 05:26:07 AM UTC 2026: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:70:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   70 |     Nodo* nuevo_nodo = createNode(data);
+      |     ^~~~
+      |     Node
+list.c:70:24: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   70 |     Nodo* nuevo_nodo = createNode(data);
+      |                        ^~~~~~~~~~
+list.c:71:43: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   71 |     if(list -> head == NULL) list -> head = nuevo_nodo;
+      |                                           ^
+list.c:72:64: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   72 |     else if(list -> head -> next == NULL) list -> head -> next = nuevo_nodo;
+      |                                                                ^
+684a959
